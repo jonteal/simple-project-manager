@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+
+const store = createStore();
 
 ReactDOM.render(
   <React.StrictMode>
