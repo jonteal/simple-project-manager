@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+// Not sure what all is needed here and what isn't.
 import firebase from 'firebase/app';
 import 'firebase/firestore'
 import 'firebase/auth'
