@@ -1,10 +1,12 @@
 // Import the functions you need from the SDKs you need
 // Not sure what all is needed here and what isn't.
 import firebase from 'firebase/app';
-import 'firebase/firestore'
-import 'firebase/auth'
+import { getFirestore } from 'redux-firestore';
+// import 'firebase/firestore'
+// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+// import 'firebase/auth'
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getFirebase } from 'react-redux-firebase';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,8 +23,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+// I don't think this firestore thing is going to work out.
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-firebase.firestore().settings({ timestampsInSnapshots: true});
+firebaseConfig.firestore().settings({ timestampsInSnapshots: true});
 
-export default firebase;
+export default getFirestore();
